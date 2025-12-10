@@ -92,4 +92,4 @@ Vinícius Paes: Engenharia de Software, Decisões de Arquitetura e Implementaç�
 
 Gemini 3: Consultoria Técnica, Code Review e Sugestões de Clean Code.
 
-Projeto desenvolvido para fins de estudo em Engenharia de Software Backend.
+Projeto desenvolvido para fins de estudo em Engenharia de Software Backend Sênior.
