@@ -88,8 +88,8 @@ Auditar: Use GET /audit/{wallet_id} para verificar a integridade da blockchain d
 🤝 Colaboração e Desenvolvimento
 Este projeto foi desenvolvido utilizando a metodologia de AI-Pair Programming. A arquitetura, regras de negócio e refatoração de código foram construídas em colaboração entre:
 
-[Seu Nome]: Engenharia de Software, Decisões de Arquitetura e Implementação.
+Vinícius Paes: Engenharia de Software, Decisões de Arquitetura e Implementação.
 
-Gemini (Google AI): Consultoria Técnica, Code Review e Sugestões de Clean Code.
+Gemini 3: Consultoria Técnica, Code Review e Sugestões de Clean Code.
 
-Projeto desenvolvido para fins de estudo em Engenharia de Software Backend Sênior.
+Projeto desenvolvido para fins de estudo em Engenharia de Software Backend.
