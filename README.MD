@@ -26,7 +26,7 @@ src/
 ├── infra/            # Camada externa (Banco, APIs, Frameworks)
 │   ├── db/           # Configuração do Banco de Dados e Models ORM
 │   └── repositories/ # Implementação do acesso a dados (SQLAlchemy)
-└── main.py           # Entrypoint da API e Configuração de Rotas
+└── main.py           # Entrypoint da API e Configuração de Rotas´´´
 
 🔒 Destaque: Ledger Criptográfico (Blockchain Interna)
 Diferente de sistemas comuns que apenas salvam o saldo, este projeto implementa um Ledger Auditável. Cada transação salva no banco contém um hash criptográfico que depende da transação anterior.
