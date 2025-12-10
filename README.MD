@@ -27,69 +27,76 @@ src/
 │   ├── db/           # Configuração do Banco de Dados e Models ORM
 │   └── repositories/ # Implementação do acesso a dados (SQLAlchemy)
 └── main.py           # Entrypoint da API e Configuração de Rotas
-```
+````
 
-🔒 Destaque: Ledger Criptográfico (Blockchain Interna)
-Diferente de sistemas comuns que apenas salvam o saldo, este projeto implementa um Ledger Auditável. Cada transação salva no banco contém um hash criptográfico que depende da transação anterior.
+## 🔒 Destaque: Ledger Criptográfico (Blockchain Interna)
 
-Como funciona:
+Diferente de sistemas comuns que apenas salvam o saldo, este projeto implementa um **Ledger Auditável**. Cada transação salva no banco contém um hash criptográfico que depende da transação anterior.
 
-Gênesis: A primeira transação recebe hash anterior zerado.
+**Como funciona:**
 
-Encadeamento: Hash Atual = SHA256(Dados da Transação + Hash da Transação Anterior).
+  * **Gênesis:** A primeira transação recebe hash anterior zerado.
+  * **Encadeamento:** `Hash Atual = SHA256(Dados da Transação + Hash da Transação Anterior)`.
+  * **Auditoria:** O sistema possui um endpoint `/audit/{wallet_id}` que recalcula toda a corrente em tempo real. Se um dado for alterado manualmente no banco, a matemática não bate e a API alerta **FRAUDE**.
 
-Auditoria: O sistema possui um endpoint /audit/{wallet_id} que recalcula toda a corrente em tempo real. Se um dado for alterado manualmente no banco, a matemática não bate e a API alerta FRAUDE.
+## ⚙️ Como Rodar Localmente
 
-⚙️ Como Rodar Localmente
-Pré-requisitos
-Python 3.11 ou superior
+### Pré-requisitos
 
-Git
+  * Python 3.11 ou superior
+  * Git
 
-Instalação
-Clone o repositório:
+### Instalação
 
-Bash
+1.  Clone o repositório:
 
-git clone [https://github.com/SEU-USUARIO/pix-token-orchestrator.git](https://github.com/SEU-USUARIO/pix-token-orchestrator.git)
-cd pix-token-orchestrator
-Crie e ative o ambiente virtual:
+    ```bash
+    git clone [https://github.com/SEU-USUARIO/pix-token-orchestrator.git](https://github.com/SEU-USUARIO/pix-token-orchestrator.git)
+    cd pix-token-orchestrator
+    ```
 
-Bash
+2.  Crie e ative o ambiente virtual:
 
-# Windows
-python -m venv venv
-.\venv\Scripts\activate
+    ```bash
+    # Windows
+    python -m venv venv
+    .\venv\Scripts\activate
 
-# Linux/Mac
-python3 -m venv venv
-source venv/bin/activate
-Instale as dependências:
+    # Linux/Mac
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
 
-Bash
+3.  Instale as dependências:
 
-pip install fastapi uvicorn sqlalchemy pydantic alembic python-dotenv aiosqlite
-Rode a aplicação:
+    ```bash
+    pip install fastapi uvicorn sqlalchemy pydantic alembic python-dotenv aiosqlite
+    ```
 
-Bash
+4.  Rode a aplicação:
 
-python -m uvicorn src.main:app --reload
-Acesse a documentação interativa (Swagger):
+    ```bash
+    python -m uvicorn src.main:app --reload
+    ```
 
-Abra seu navegador em: http://127.0.0.1:8000/docs
+5.  Acesse a documentação interativa (Swagger):
 
-🧪 Testando a API
-Criar Carteira: Use POST /wallets/ para criar um usuário. Copie o user_id e o wallet_id.
+      * Abra seu navegador em: `http://127.0.0.1:8000/docs`
 
-Simular Pix: Use POST /webhook/pix-simulation com o user_id para depositar valores.
+## 🧪 Testando a API
 
-Auditar: Use GET /audit/{wallet_id} para verificar a integridade da blockchain daquela carteira.
+1.  **Criar Carteira:** Use `POST /wallets/` para criar um usuário. Copie o `user_id` e o `wallet_id`.
+2.  **Simular Pix:** Use `POST /webhook/pix-simulation` com o `user_id` para depositar valores.
+3.  **Auditar:** Use `GET /audit/{wallet_id}` para verificar a integridade da blockchain daquela carteira.
 
-🤝 Colaboração e Desenvolvimento
-Este projeto foi desenvolvido utilizando a metodologia de AI-Pair Programming. A arquitetura, regras de negócio e refatoração de código foram construídas em colaboração entre:
+## 🤝 Colaboração e Desenvolvimento
 
-Vinícius Paes: Engenharia de Software, Decisões de Arquitetura e Implementação.
+Este projeto foi desenvolvido utilizando a metodologia de **AI-Pair Programming**. A arquitetura, regras de negócio e refatoração de código foram construídas em colaboração entre:
 
-Gemini 3: Consultoria Técnica, Code Review e Sugestões de Clean Code.
+  - **Vinícius Paes**: Engenharia de Software, Decisões de Arquitetura e Implementação.
+  - **Gemini (Google AI)**: Consultoria Técnica, Code Review e Sugestões de Clean Code.
 
-Projeto desenvolvido para fins de estudo em Engenharia de Software Backend Sênior.
+-----
+
+*Projeto desenvolvido para fins de estudo em Engenharia de Software Backend.*
+
