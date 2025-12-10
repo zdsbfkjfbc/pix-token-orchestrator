@@ -1,3 +1,5 @@
+# 🪙 Pix Token Orchestrator
+
 Um sistema backend financeiro robusto desenvolvido em Python, focado em alta performance, segurança e auditabilidade. O projeto orquestra recebimentos via Pix e converte valores fiduciários (BRL) em tokens digitais (Lastro 1:1), utilizando uma **Blockchain Interna (Ledger Criptográfico)** para garantir a imutabilidade das transações.
 
 ## 🚀 Tecnologias e Arquitetura
@@ -49,7 +51,7 @@ Clone o repositório:
 
 Bash
 
-git clone https://github.com/SEU-USUARIO/pix-token-orchestrator.git
+git clone [https://github.com/SEU-USUARIO/pix-token-orchestrator.git](https://github.com/SEU-USUARIO/pix-token-orchestrator.git)
 cd pix-token-orchestrator
 Crie e ative o ambiente virtual:
 
@@ -86,8 +88,8 @@ Auditar: Use GET /audit/{wallet_id} para verificar a integridade da blockchain d
 🤝 Colaboração e Desenvolvimento
 Este projeto foi desenvolvido utilizando a metodologia de AI-Pair Programming. A arquitetura, regras de negócio e refatoração de código foram construídas em colaboração entre:
 
-Vinícius Paes: Engenharia de Software, Decisões de Arquitetura e Implementação.
+[Seu Nome]: Engenharia de Software, Decisões de Arquitetura e Implementação.
 
 Gemini (Google AI): Consultoria Técnica, Code Review e Sugestões de Clean Code.
 
-Projeto desenvolvido para fins de estudo em Engenharia de Software Backend.
+Projeto desenvolvido para fins de estudo em Engenharia de Software Backend Sênior.
