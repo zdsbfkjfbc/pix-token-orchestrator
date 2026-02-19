@@ -89,12 +89,11 @@ Diferente de sistemas comuns que apenas salvam o saldo, este projeto implementa 
 2.  **Simular Pix:** Use `POST /webhook/pix-simulation` com o `user_id` para depositar valores.
 3.  **Auditar:** Use `GET /audit/{wallet_id}` para verificar a integridade da blockchain daquela carteira.
 
-## 🤝 Colaboração e Desenvolvimento
+## 🤝 Desenvolvimento
 
-Este projeto foi desenvolvido utilizando a metodologia de **AI-Pair Programming**. A arquitetura, regras de negócio e refatoração de código foram construídas em colaboração entre:
+Este projeto foi desenvolvido através de projeto de freelancer que havia visto na plataforma. A arquitetura, regras de negócio e refatoração de código foram construídas:
 
-  - **Vinícius Paes**: Engenharia de Software, Decisões de Arquitetura e Implementação.
-  - **Gemini (Google AI)**: Consultoria Técnica, Code Review e Sugestões de Clean Code.
+  - **Vinícius Paes**: Engenharia de Software, Decisões de Arquitetura e Implementação e o Gemini para Code Review.
 
 -----
 
